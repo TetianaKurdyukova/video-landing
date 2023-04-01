@@ -57,14 +57,21 @@ a {
 }
 
 .swiper-pagination-bullet {
-  width: 19px;
-  height: 19px;
+  width: 15px;
+  height: 15px;
   border: 1px solid #fff;
   background: transparent;
   margin: 0 4px !important;
 
   &.swiper-pagination-bullet-active {
     background: #fff;
+  }
+}
+
+@media (min-width: 1023px) {
+  .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
   }
 }
 
@@ -239,9 +246,15 @@ a {
 
 /* love story */
 .love-story--section {
+  background: #2c2323;
+}
+.love-story--section,
+.real-estate--section {
   padding: 50px 0;
   line-height: 1.1;
   font-family: 'Franklin Gothic Demi Cond', Arial, Helvetica, sans-serif;
+  -webkit-box-shadow: inset 0px 0px 15px 8px rgba(0,0,0,0.29); 
+  box-shadow: inset 0px 0px 15px 8px rgba(0,0,0,0.29);
 
   .container {
     max-width: 960px;
@@ -278,6 +291,17 @@ a {
   }
 }
 
+.real-estate--section {
+  background: #262c2a;
+
+  h2 {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a8d8ca, 0 0 20px #a8d8ca, 0 0 25px #a8d8ca, 0 0 30px #a8d8ca, 0 0 35px #a8d8ca;
+    &::before {
+      content: 'Real Estate';
+    }
+  }
+}
+
 .general-swiper__container {
   margin: 0 -20px;
   overflow: hidden;
@@ -308,6 +332,11 @@ a {
 }
 
 @media (min-width: 768px) {
+  .love-story--section,
+  .real-estate--section {
+    padding: 75px 0;
+  }
+
   .love-story--section {
     h2 {
       text-align: left;
@@ -319,6 +348,33 @@ a {
         left: 63px;
         font-size: 90px;
         transform: none;
+      }
+    }
+  }
+
+  .real-estate--section {
+    h2 {
+      text-align: left;
+      margin-left: 50px;
+      font-size: 44px;
+
+      &::before {
+        top: 0;
+        right: 95%;
+        font-size: 44px;
+        opacity: .5;
+      }
+
+      &:after {
+        content: 'Real Estate';
+        position: absolute;
+        top: 0;
+        left: 95%;
+        white-space: nowrap;
+        font-weight: 100;
+        font-size: 44px;
+        opacity: .25;
+        letter-spacing: 0;
       }
     }
   }
@@ -352,6 +408,20 @@ a {
       background: url(../images/icon_lovestory.svg) no-repeat;
       transform: rotate(180deg);
     }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .real-estate-content {
+    column-count: 2;
+    column-gap: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0 0 25px;
+    position: relative;
+    padding: 36px 46px;
 
     p {
       margin: 0;
@@ -477,6 +547,12 @@ a {
     figcaption {
       font-size: 16px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .feedback--section {
+    padding: 75px 0;
   }
 }
 

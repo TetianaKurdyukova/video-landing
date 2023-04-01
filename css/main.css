@@ -50,8 +50,8 @@ a:hover {
 }
 
 .swiper-pagination-bullet {
-  width: 19px;
-  height: 19px;
+  width: 15px;
+  height: 15px;
   border: 1px solid #fff;
   background: transparent;
   margin: 0 4px !important;
@@ -60,6 +60,12 @@ a:hover {
   background: #fff;
 }
 
+@media (min-width: 1023px) {
+  .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+  }
+}
 .header {
   background: #090909;
   color: #fff;
@@ -214,17 +220,26 @@ a:hover {
 
 /* love story */
 .love-story--section {
+  background: #2c2323;
+}
+
+.love-story--section,
+.real-estate--section {
   padding: 50px 0;
   line-height: 1.1;
   font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
+  box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.29);
 }
-.love-story--section .container {
+.love-story--section .container,
+.real-estate--section .container {
   max-width: 960px;
 }
-.love-story--section p {
+.love-story--section p,
+.real-estate--section p {
   margin: 0 0 20px;
 }
-.love-story--section h2 {
+.love-story--section h2,
+.real-estate--section h2 {
   position: relative;
   text-transform: uppercase;
   color: #fffefe;
@@ -236,7 +251,8 @@ a:hover {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a68383, 0 0 20px #a68383, 0 0 25px #a68383, 0 0 30px #a68383, 0 0 35px #a68383;
   margin: 0 0 50px;
 }
-.love-story--section h2:before {
+.love-story--section h2:before,
+.real-estate--section h2:before {
   content: "Love Story";
   position: absolute;
   top: -17px;
@@ -247,6 +263,16 @@ a:hover {
   font-size: 74px;
   opacity: 0.15;
   letter-spacing: 0;
+}
+
+.real-estate--section {
+  background: #262c2a;
+}
+.real-estate--section h2 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a8d8ca, 0 0 20px #a8d8ca, 0 0 25px #a8d8ca, 0 0 30px #a8d8ca, 0 0 35px #a8d8ca;
+}
+.real-estate--section h2::before {
+  content: "Real Estate";
 }
 
 .general-swiper__container {
@@ -275,6 +301,10 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .love-story--section,
+  .real-estate--section {
+    padding: 75px 0;
+  }
   .love-story--section h2 {
     text-align: left;
     margin-left: 50px;
@@ -285,6 +315,28 @@ a:hover {
     left: 63px;
     font-size: 90px;
     transform: none;
+  }
+  .real-estate--section h2 {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 44px;
+  }
+  .real-estate--section h2::before {
+    top: 0;
+    right: 95%;
+    font-size: 44px;
+    opacity: 0.5;
+  }
+  .real-estate--section h2:after {
+    content: "Real Estate";
+    position: absolute;
+    top: 0;
+    left: 95%;
+    white-space: nowrap;
+    font-weight: 100;
+    font-size: 44px;
+    opacity: 0.25;
+    letter-spacing: 0;
   }
   .love-content {
     -moz-column-count: 2;
@@ -317,6 +369,20 @@ a:hover {
     transform: rotate(180deg);
   }
   .love-content p {
+    margin: 0;
+  }
+  .real-estate-content {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0 0 25px;
+    position: relative;
+    padding: 36px 46px;
+  }
+  .real-estate-content p {
     margin: 0;
   }
 }
@@ -416,6 +482,11 @@ a:hover {
   }
   .feedback-content figcaption {
     font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .feedback--section {
+    padding: 75px 0;
   }
 }
 /* footer */

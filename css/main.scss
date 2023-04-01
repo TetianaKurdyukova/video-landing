@@ -226,6 +226,15 @@ a {
   }
 }
 
+/* contact */
+.contact-button--section {
+  padding: 60px 0;
+
+  .container {
+    text-align: center;
+  }
+}
+
 /* feedback */
 .feedback--section {
   background: #171717;
@@ -498,6 +507,11 @@ a {
 }
 
 @media (min-width: 768px) {
+  .contact-button {
+    font-size: 27px;
+    padding: 10px 61px 10px 15px;
+  }
+
   .footer-top {
     display: flex;
     justify-content: space-between;

@@ -19,6 +19,10 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #09070A;
   font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
@@ -26,6 +30,7 @@ body {
   font-size: 16px;
   line-height: 1.3;
   color: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -41,14 +46,20 @@ a:hover {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
+.swiper-pagination-bullet {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  background: transparent;
+  margin: 0 4px !important;
 }
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
 .header {
   background: #090909;
   color: #fff;
@@ -201,6 +212,114 @@ a:hover {
   margin: 0 0 26px;
 }
 
+/* love story */
+.love-story--section {
+  padding: 50px 0;
+  line-height: 1.1;
+  font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
+}
+.love-story--section .container {
+  max-width: 960px;
+}
+.love-story--section p {
+  margin: 0 0 20px;
+}
+.love-story--section h2 {
+  position: relative;
+  text-transform: uppercase;
+  color: #fffefe;
+  font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1.4px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a68383, 0 0 20px #a68383, 0 0 25px #a68383, 0 0 30px #a68383, 0 0 35px #a68383;
+  margin: 0 0 50px;
+}
+.love-story--section h2:before {
+  content: "Love Story";
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 100;
+  font-size: 74px;
+  opacity: 0.15;
+  letter-spacing: 0;
+}
+
+.general-swiper__container {
+  margin: 0 -20px;
+  overflow: hidden;
+}
+.general-swiper__container .swiper-wrapper {
+  padding: 0 0 50px;
+}
+.general-swiper__container .swiper-pagination {
+  bottom: 0;
+}
+.general-swiper__container .video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.general-swiper__container .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .love-story--section h2 {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 44px;
+  }
+  .love-story--section h2::before {
+    top: 2px;
+    left: 63px;
+    font-size: 90px;
+    transform: none;
+  }
+  .love-content {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0 0 25px;
+    position: relative;
+    padding: 36px 46px;
+  }
+  .love-content:before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    background: url(../images/icon_lovestory.svg) no-repeat;
+  }
+  .love-content:after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: 0;
+    width: 55px;
+    height: 55px;
+    background: url(../images/icon_lovestory.svg) no-repeat;
+    transform: rotate(180deg);
+  }
+  .love-content p {
+    margin: 0;
+  }
+}
 /* contact */
 .contact-button--section {
   padding: 60px 0;
@@ -284,16 +403,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .feedback-swiper .swiper-pagination-bullet {
-    width: 19px;
-    height: 19px;
-    border: 1px solid #fff;
-    background: transparent;
-    margin: 0 4px !important;
-  }
-  .feedback-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #fff;
   }
   .feedback-swiper__holder {
     padding: 0 50px;

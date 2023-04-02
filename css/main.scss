@@ -34,7 +34,7 @@ body {
   font-family: 'Franklin Gothic', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.1;
   color: #fff;
   overflow-x: hidden;
 }
@@ -42,12 +42,14 @@ body {
 @media (min-width: 768px) {
   body {
     font-size: 20px;
+    line-height: 1.2;
   }
 }
 
 @media (min-width: 1024px) {
   body {
     font-size: 32px;
+    line-height: 1.3;
   }
 }
 
@@ -279,9 +281,9 @@ a {
 }
 
 .love-story--section,
-.real-estate--section {
+.real-estate--section,
+.commercial--section {
   padding: 50px 0;
-  line-height: 1.1;
   font-family: 'Franklin Gothic Demi Cond', Arial, Helvetica, sans-serif;
   -webkit-box-shadow: inset 0px 0px 15px 8px rgba(0,0,0,0.29); 
   box-shadow: inset 0px 0px 15px 8px rgba(0,0,0,0.29);
@@ -317,6 +319,61 @@ a {
       font-size: 74px;
       opacity: .15;
       letter-spacing: 0;
+    }
+  }
+}
+
+/* commercial */
+.commercial--section {
+  h2 {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #75c2d6, 0 0 20px #75c2d6, 0 0 25px #75c2d6, 0 0 30px #75c2d6, 0 0 35px #75c2d6;
+
+    &:before {
+      content: 'Commercial';
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .commercial--section {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 960px;
+      padding-bottom: 50px;
+    }
+
+    h2 {
+      text-align: left;
+      margin-left: 20px;
+      font-size: 44px;
+      width: 45%;
+      padding: 0 0 90px;
+
+      &::before {
+        top: 46%;
+        left: 0;
+        font-size: 44px;
+        opacity: 0.5;
+        transform: none;
+        letter-spacing: 1.6px;
+      }
+
+      &:after {
+        content: 'Commercial';
+        position: absolute;
+        top: 90%;
+        left: 0;
+        white-space: nowrap;
+        font-weight: 100;
+        font-size: 44px;
+        opacity: .25;
+        letter-spacing: 1.6px;
+      }
+    }
+
+    .commercial-content {
+      width: 50%;
     }
   }
 }

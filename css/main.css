@@ -33,6 +33,16 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 32px;
+  }
+}
 a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -60,7 +70,7 @@ a:hover {
   background: #fff;
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .swiper-pagination-bullet {
     width: 19px;
     height: 19px;
@@ -199,28 +209,41 @@ a:hover {
 /* about */
 .about--section {
   background: #09070A;
-}
-.about--section .container {
-  max-width: 1330px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 25px 0 15px;
+  font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
 }
 .about--section img {
   display: block;
-  width: 56%;
-}
-.about--section .about-info {
-  width: 44%;
-  font-size: 32px;
+  margin: 0 auto 40px;
 }
 .about--section p {
-  margin: 0 0 26px;
+  margin: 0 0 20px;
 }
 
+@media (min-width: 768px) {
+  .about--section .container {
+    max-width: 1330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about--section img {
+    width: 56%;
+  }
+  .about--section .about-info {
+    width: 44%;
+  }
+  .about--section p {
+    margin: 0 0 26px;
+  }
+}
 /* love story */
 .love-story--section {
   background: #2c2323;
+}
+
+.love-content {
+  padding: 0 0 15px;
 }
 
 .love-story--section,
@@ -232,7 +255,7 @@ a:hover {
 }
 .love-story--section .container,
 .real-estate--section .container {
-  max-width: 960px;
+  max-width: 1200px;
 }
 .love-story--section p,
 .real-estate--section p {
@@ -275,6 +298,10 @@ a:hover {
   content: "Real Estate";
 }
 
+.real-estate-content {
+  padding: 0 0 15px;
+}
+
 .general-swiper__container {
   margin: 0 -20px;
   overflow: hidden;
@@ -307,7 +334,7 @@ a:hover {
   }
   .love-story--section h2 {
     text-align: left;
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 44px;
   }
   .love-story--section h2::before {
@@ -318,7 +345,7 @@ a:hover {
   }
   .real-estate--section h2 {
     text-align: left;
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 44px;
   }
   .real-estate--section h2::before {
@@ -341,10 +368,8 @@ a:hover {
   .love-content {
     -moz-column-count: 2;
          column-count: 2;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-    font-size: 20px;
-    line-height: 1.2;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
     margin: 0 0 25px;
     position: relative;
     padding: 36px 46px;
@@ -374,16 +399,27 @@ a:hover {
   .real-estate-content {
     -moz-column-count: 2;
          column-count: 2;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-    font-size: 20px;
-    line-height: 1.2;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
     margin: 0 0 25px;
     position: relative;
     padding: 36px 46px;
   }
   .real-estate-content p {
     margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .love-story--section h2,
+  .real-estate--section h2 {
+    font-size: 56px;
+  }
+  .real-estate--section h2::before, .real-estate--section h2::after {
+    font-size: 56px;
+  }
+  .real-estate-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 /* contact */
@@ -407,6 +443,10 @@ a:hover {
   margin: 0 0 40px;
 }
 
+.feedback-swiper h4 {
+  font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
 .feedback-swiper img {
   display: block;
   max-width: 300px;
@@ -435,7 +475,6 @@ a:hover {
 }
 
 .feedback-content {
-  font-size: 16px;
   margin: 0 auto;
   max-width: 320px;
   font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
@@ -487,6 +526,17 @@ a:hover {
 @media (min-width: 768px) {
   .feedback--section {
     padding: 75px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .feedback-swiper h4 {
+    font-size: 34px;
+  }
+  .feedback-content {
+    font-size: 28px;
+  }
+  .feedback-content figcaption {
+    font-size: 24px;
   }
 }
 /* footer */
@@ -614,7 +664,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .contact-button {
-    font-size: 27px;
+    font-size: 24px;
     padding: 10px 61px 10px 15px;
   }
   .footer-top {
@@ -632,8 +682,14 @@ a:hover {
   .footer-contact {
     width: 40%;
     margin: 0;
+    font-size: 16px;
   }
   .footer-logo {
     margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-contact {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=main.css.map */

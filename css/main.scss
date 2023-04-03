@@ -218,24 +218,24 @@ a {
     padding: 7px 15px;
     text-transform: uppercase;
     font-weight: 900;
-    background: rgba(203,212,225,1) linear-gradient(0deg, rgba(207,216,229,1) 0%, rgba(203,212,225,1) 45%, rgba(192,201,214,1) 100%);
+    background: rgba(203,212,225,1);
 
     &.beige-link {
-      background: rgba(216,201,181,1) linear-gradient(0deg, rgba(229,214,194,1) 0%, rgba(216,201,181,1) 45%, rgba(214,199,179,1) 100%);
+      background: rgba(216,201,181,1);
       &:hover {
         background: #ccb391;
       }
     }
 
     &.green-link {
-      background: rgba(192,214,208,1) linear-gradient(0deg, rgba(207,229,223,1) 0%, rgba(192,214,208,1) 45%, rgba(192,214,208,1) 100%);
+      background: rgba(192,214,208,1);
       &:hover {
-        background: #a3ccc1;
+        background: #9ac4b9;
       }
     }
 
     &.pink-link {
-      background: rgba(216,181,181,1) linear-gradient(0deg, rgba(230,195,195,1) 0%, rgba(216,181,181,1) 45%, rgba(215,180,180,1) 100%);
+      background: rgba(216,181,181,1);
       color: #fef3f3;
       &:hover {
         background: #d9a6a6;
@@ -244,7 +244,7 @@ a {
 
     &:hover {
       color: #fff;
-      background: #b8c8e0;
+      background: #adbdd6;
     }
   }
 }
@@ -303,6 +303,7 @@ a {
 
     img {
       width: 56%;
+      max-width: 600px;
     }
 
     .about-info {

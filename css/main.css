@@ -196,22 +196,22 @@ a:hover {
   padding: 7px 15px;
   text-transform: uppercase;
   font-weight: 900;
-  background: rgb(203, 212, 225) linear-gradient(0deg, rgb(207, 216, 229) 0%, rgb(203, 212, 225) 45%, rgb(192, 201, 214) 100%);
+  background: rgb(203, 212, 225);
 }
 .intro-menu a.beige-link {
-  background: rgb(216, 201, 181) linear-gradient(0deg, rgb(229, 214, 194) 0%, rgb(216, 201, 181) 45%, rgb(214, 199, 179) 100%);
+  background: rgb(216, 201, 181);
 }
 .intro-menu a.beige-link:hover {
   background: #ccb391;
 }
 .intro-menu a.green-link {
-  background: rgb(192, 214, 208) linear-gradient(0deg, rgb(207, 229, 223) 0%, rgb(192, 214, 208) 45%, rgb(192, 214, 208) 100%);
+  background: rgb(192, 214, 208);
 }
 .intro-menu a.green-link:hover {
-  background: #a3ccc1;
+  background: #9ac4b9;
 }
 .intro-menu a.pink-link {
-  background: rgb(216, 181, 181) linear-gradient(0deg, rgb(230, 195, 195) 0%, rgb(216, 181, 181) 45%, rgb(215, 180, 180) 100%);
+  background: rgb(216, 181, 181);
   color: #fef3f3;
 }
 .intro-menu a.pink-link:hover {
@@ -219,7 +219,7 @@ a:hover {
 }
 .intro-menu a:hover {
   color: #fff;
-  background: #b8c8e0;
+  background: #adbdd6;
 }
 
 @media (min-width: 768px) {
@@ -265,6 +265,7 @@ a:hover {
   }
   .about--section img {
     width: 56%;
+    max-width: 600px;
   }
   .about--section .about-info {
     width: 44%;

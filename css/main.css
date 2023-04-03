@@ -28,6 +28,7 @@ body {
   font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
+  letter-spacing: 0.4px;
   line-height: 1.1;
   color: #fff;
   overflow-x: hidden;
@@ -37,6 +38,14 @@ body {
   body {
     font-size: 20px;
     line-height: 1.2;
+  }
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none !important;
   }
 }
 @media (min-width: 1024px) {
@@ -250,24 +259,28 @@ a:hover {
 
 .love-story--section,
 .real-estate--section,
-.commercial--section {
+.commercial--section,
+.wedding--section {
   padding: 50px 0;
   font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
   box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.29);
 }
 .love-story--section .container,
 .real-estate--section .container,
-.commercial--section .container {
+.commercial--section .container,
+.wedding--section .container {
   max-width: 1200px;
 }
 .love-story--section p,
 .real-estate--section p,
-.commercial--section p {
+.commercial--section p,
+.wedding--section p {
   margin: 0 0 20px;
 }
 .love-story--section h2,
 .real-estate--section h2,
-.commercial--section h2 {
+.commercial--section h2,
+.wedding--section h2 {
   position: relative;
   text-transform: uppercase;
   color: #fffefe;
@@ -281,7 +294,8 @@ a:hover {
 }
 .love-story--section h2:before,
 .real-estate--section h2:before,
-.commercial--section h2:before {
+.commercial--section h2:before,
+.wedding--section h2:before {
   content: "Love Story";
   position: absolute;
   top: -17px;
@@ -294,6 +308,164 @@ a:hover {
   letter-spacing: 0;
 }
 
+/* wedding */
+.wedding--section {
+  background: #2c2822;
+}
+.wedding--section h2 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #dbc5ab, 0 0 20px #dbc5ab, 0 0 25px #dbc5ab, 0 0 30px #dbc5ab, 0 0 35px #dbc5ab;
+}
+.wedding--section h2:before {
+  content: "Wedding";
+}
+.wedding--section .wedding-content {
+  margin: 0 0 20px;
+}
+
+.wedding-details-holder {
+  padding: 30px 0 0;
+}
+.wedding-details-holder h4 {
+  font-size: 18px;
+  color: #bfab94;
+  font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.wedding-details-holder ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px 30px;
+  overflow: hidden;
+}
+.wedding-details-holder li {
+  padding: 0 15px;
+  width: 30%;
+}
+.wedding-details-holder li:last-of-type {
+  width: 40%;
+}
+.wedding-details-holder .time {
+  display: block;
+  font-size: 24px;
+  margin: 0 0 8px;
+  letter-spacing: 0;
+}
+.wedding-details-holder .time span {
+  font-size: 12px;
+}
+.wedding-details-holder .place {
+  display: block;
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+.wedding-details-holder em {
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+}
+.wedding-details-holder .note {
+  position: relative;
+  padding: 12px 0 40px;
+}
+.wedding-details-holder .note::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 5px;
+  background: #bfab94;
+}
+
+.wedding-heading {
+  padding: 20px 0 0;
+}
+.wedding-heading .heading {
+  display: block;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 768px) {
+  .wedding-holder {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wedding-holder.sub {
+    padding-top: 50px;
+  }
+  .wedding-heading {
+    width: 45%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wedding-heading .heading {
+    font-size: 28px;
+  }
+  .wedding-heading .note {
+    position: relative;
+    padding: 12px 0 0;
+    align-self: flex-end;
+  }
+  .wedding-heading .note::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 5px;
+    background: #bfab94;
+  }
+  .wedding--section h2 {
+    font-size: 44px;
+  }
+  .wedding--section .h2 {
+    width: 45%;
+    text-align: left;
+  }
+  .wedding--section .h2::before {
+    content: "Wedding";
+    top: 6px;
+    font-size: 100px;
+    left: -40px;
+    transform: none;
+  }
+  .wedding--section .wedding-content {
+    width: 50%;
+    margin: 0;
+  }
+  .wedding-details-holder {
+    padding: 0;
+  }
+  .wedding-details-holder .time {
+    font-size: 42px;
+  }
+  .wedding-details-holder .time span {
+    font-size: 18px;
+  }
+  .wedding-details-holder .place,
+  .wedding-details-holder em {
+    font-size: 18px;
+  }
+  .wedding-details-holder ul {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .wedding--section .heading {
+    font-size: 48px;
+  }
+  .wedding-heading .note {
+    font-size: 28px;
+  }
+}
 /* commercial */
 .commercial--section h2 {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #75c2d6, 0 0 20px #75c2d6, 0 0 25px #75c2d6, 0 0 30px #75c2d6, 0 0 35px #75c2d6;
@@ -471,6 +643,9 @@ a:hover {
   .real-estate-content {
     padding-left: 0;
     padding-right: 0;
+  }
+  .love-content {
+    margin-bottom: 50px;
   }
 }
 /* contact */

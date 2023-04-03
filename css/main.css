@@ -21,6 +21,31 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  background: #000;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.65;
+}
+.scroll-to-top:hover {
+  opacity: 1;
+}
+.scroll-to-top svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
 }
 
 body {
@@ -42,6 +67,9 @@ body {
   .desktop-hidden {
     display: none !important;
   }
+  .scroll-to-top {
+    display: flex;
+  }
 }
 @media (max-width: 767px) {
   .mobile-hidden {
@@ -60,7 +88,7 @@ a {
   color: #fff;
 }
 a:hover {
-  color: rgba(255, 255, 225, 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .container {
@@ -90,7 +118,7 @@ a:hover {
 .header {
   background: #090909;
   color: #fff;
-  padding: 15px 0;
+  padding: 5px 0;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -121,12 +149,41 @@ a:hover {
   font-size: 22px;
   display: flex;
 }
-.main-nav li {
-  padding: 0 15px;
+.main-nav > li {
+  padding: 0 15px 25px;
+  margin-bottom: -25px;
+  position: relative;
+}
+.main-nav > li svg {
+  transition: all 0.3s ease-in-out;
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+}
+.main-nav > li:hover svg {
+  fill: rgba(255, 255, 255, 0.65);
+}
+.main-nav > li:hover .main-drop {
+  display: block;
 }
 
 .main-drop {
   display: none;
+  position: absolute;
+  background: #3a3939;
+  box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.29);
+  padding: 10px 20px;
+  top: 100%;
+  left: 0;
+  text-align: center;
+  font-size: 18px;
+}
+.main-drop li {
+  padding: 7px 0;
 }
 
 .header-phone {
@@ -685,6 +742,12 @@ a:hover {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .contact-button--section .socials {
+    display: flex;
+    padding: 50px 0 0;
+  }
+}
 /* feedback */
 .feedback--section {
   background: #171717;
@@ -886,24 +949,24 @@ a:hover {
   background: #336619;
 }
 
-.footer-socials {
+.socials {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0;
 }
-.footer-socials li {
+.socials li {
   padding: 0 15px;
 }
-.footer-socials li img {
+.socials li img {
   display: block;
 }
-.footer-socials a svg g,
-.footer-socials a svg path {
+.socials a svg g,
+.socials a svg path {
   transition: all 0.3s ease-in-out;
 }
-.footer-socials a:hover svg g,
-.footer-socials a:hover svg path {
+.socials a:hover svg g,
+.socials a:hover svg path {
   opacity: 1;
 }
 
@@ -931,7 +994,7 @@ a:hover {
     width: 60%;
     margin: 0;
   }
-  .footer-socials {
+  .socials {
     display: none;
   }
   .footer-contact {

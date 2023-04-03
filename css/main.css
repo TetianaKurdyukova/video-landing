@@ -159,13 +159,16 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70%;
+  width: 90%;
   padding: 10px;
   height: 60%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .intro-content h2 {
-  font-size: 72px;
+  font-size: 18px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -182,6 +185,7 @@ a:hover {
   justify-content: center;
   font-size: 20px;
   font-weight: 500;
+  display: none;
 }
 .intro-menu li {
   padding: 0 16px;
@@ -192,35 +196,56 @@ a:hover {
   padding: 7px 15px;
   text-transform: uppercase;
   font-weight: 900;
-  background: linear-gradient(0deg, rgb(207, 216, 229) 0%, rgb(203, 212, 225) 45%, rgb(192, 201, 214) 100%);
+  background: rgb(203, 212, 225) linear-gradient(0deg, rgb(207, 216, 229) 0%, rgb(203, 212, 225) 45%, rgb(192, 201, 214) 100%);
 }
 .intro-menu a.beige-link {
-  background: linear-gradient(0deg, rgb(229, 214, 194) 0%, rgb(216, 201, 181) 45%, rgb(214, 199, 179) 100%);
+  background: rgb(216, 201, 181) linear-gradient(0deg, rgb(229, 214, 194) 0%, rgb(216, 201, 181) 45%, rgb(214, 199, 179) 100%);
 }
 .intro-menu a.beige-link:hover {
-  color: #a2927d;
+  background: #ccb391;
 }
 .intro-menu a.green-link {
-  background: linear-gradient(0deg, rgb(207, 229, 223) 0%, rgb(192, 214, 208) 45%, rgb(192, 214, 208) 100%);
+  background: rgb(192, 214, 208) linear-gradient(0deg, rgb(207, 229, 223) 0%, rgb(192, 214, 208) 45%, rgb(192, 214, 208) 100%);
 }
 .intro-menu a.green-link:hover {
-  color: #728983;
+  background: #a3ccc1;
 }
 .intro-menu a.pink-link {
-  background: linear-gradient(0deg, rgb(230, 195, 195) 0%, rgb(216, 181, 181) 45%, rgb(215, 180, 180) 100%);
+  background: rgb(216, 181, 181) linear-gradient(0deg, rgb(230, 195, 195) 0%, rgb(216, 181, 181) 45%, rgb(215, 180, 180) 100%);
   color: #fef3f3;
 }
 .intro-menu a.pink-link:hover {
-  color: #ad8a8a;
+  background: #d9a6a6;
 }
 .intro-menu a:hover {
-  color: #8b98aa;
+  color: #fff;
+  background: #b8c8e0;
 }
 
+@media (min-width: 768px) {
+  .intro-content {
+    display: initial;
+  }
+  .intro-content h2 {
+    font-size: 48px;
+  }
+  .intro-menu {
+    display: flex;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .intro-content h2 {
+    font-size: 72px;
+  }
+  .intro-menu {
+    font-size: 20px;
+  }
+}
 /* about */
 .about--section {
   background: #09070A;
-  padding: 25px 0 15px;
+  padding: 0 0 15px;
   font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
 }
 .about--section img {
@@ -423,6 +448,9 @@ a:hover {
     height: 5px;
     background: #bfab94;
   }
+  .wedding--section {
+    padding: 75px 0;
+  }
   .wedding--section h2 {
     font-size: 44px;
   }
@@ -545,9 +573,9 @@ a:hover {
 .general-swiper__container .video {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 18px;
+  width: 97%;
+  height: 97%;
 }
 
 @media (min-width: 768px) {

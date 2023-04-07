@@ -59,6 +59,10 @@ body {
   overflow-x: hidden;
 }
 
+.active-mobile-menu {
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 20px;
@@ -234,6 +238,7 @@ a:hover {
   height: 30px;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .burger,
@@ -267,14 +272,21 @@ a:hover {
   margin-top: 12px;
 }
 
-.mobile-menu {
+.mobile-menu__holder {
   left: 100%;
   top: 80px;
-  background: pink;
+  background: #090909;
   width: 100%;
   transition: left 0.3s ease-in-out;
   position: fixed;
   bottom: 0;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 20px;
+}
+.mobile-menu__holder li {
+  margin: 0 0 10px;
 }
 
 .open-mobile-menu .burger {
@@ -288,8 +300,27 @@ a:hover {
 .open-mobile-menu .burger:after {
   transform: rotate(-90deg);
 }
-.open-mobile-menu .mobile-menu {
+.open-mobile-menu .mobile-menu__holder {
   left: 0;
+}
+
+.mobile-menu-drop {
+  text-transform: initial;
+  margin: 10px 0 0 10px;
+}
+.mobile-menu-drop li {
+  display: flex;
+  align-items: center;
+}
+.mobile-menu-drop li a:hover svg {
+  fill: rgba(255, 255, 255, 0.75);
+}
+.mobile-menu-drop svg {
+  transition: all 0.3s ease-in-out;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  padding: 0 5px 0 0;
 }
 
 /*  intro */
@@ -989,9 +1020,6 @@ a:hover {
 
 .footer-column {
   width: 50%;
-}
-.footer-column ul {
-  letter-spacing: -1.2px;
 }
 .footer-column li {
   margin: 0 0 8px;

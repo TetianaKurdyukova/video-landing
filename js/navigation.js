@@ -16,6 +16,8 @@ for (var i = 0; i < lnks.length; i++) {
 
 /* burger menu */
 const wrapper = document.getElementById('hamburger-wrapper');
+const body = document.body;
 wrapper.addEventListener("click", () => {
-  wrapper.classList.toggle("open-mobile-menu")
+  wrapper.classList.toggle("open-mobile-menu");
+  body.parentNode.classList.toggle("active-mobile-menu");
 })

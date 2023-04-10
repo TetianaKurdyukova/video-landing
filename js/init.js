@@ -32,3 +32,27 @@ const swiper2 = new Swiper('.general-swiper', {
     }
   }
 });
+
+/* contact form */
+let modalBtns = [...document.querySelectorAll(".contact-modal-button")];
+modalBtns.forEach(function (btn) {
+  btn.onclick = function () {
+    let modal = btn.getAttribute("data-modal");
+    document.getElementById(modal).style.display = "block";
+    document.body.parentNode.classList.add("opened-popup");
+  };
+});
+let closeBtns = [...document.querySelectorAll(".close")];
+closeBtns.forEach(function (btn) {
+  btn.onclick = function () {
+    let modal = btn.closest(".contact-form");
+    modal.style.display = "none";
+    document.body.parentNode.classList.remove("opened-popup");
+  };
+});
+window.onclick = function (event) {
+  if (event.target.className === "contact-form") {
+    event.target.style.display = "none";
+    document.body.parentNode.classList.remove("opened-popup");
+  }
+};

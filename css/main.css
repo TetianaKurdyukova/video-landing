@@ -900,6 +900,7 @@ a:hover {
 .contact-form .contact-form__holder {
   margin: 0 auto;
   width: 100%;
+  max-width: 900px;
   position: relative;
   padding: 50px 20px;
   text-align: left;
@@ -926,7 +927,7 @@ a:hover {
 }
 
 .contact-container {
-  max-width: 760px;
+  max-width: 640px;
   margin: 0 auto;
   font-size: 16px;
   font-family: "Franklin Gothic Demi Cond", Arial, Helvetica, sans-serif;
@@ -967,6 +968,11 @@ a:hover {
   outline: none;
   color: #fff;
 }
+.contact-container .textarea-holder {
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
+}
 .contact-container .textarea {
   font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
   padding: 5px;
@@ -978,6 +984,7 @@ a:hover {
   background: transparent;
   resize: none;
   border: 1px solid rgba(255, 255, 255, 0.65);
+  padding: 5px;
   margin: 0 0 35px;
 }
 .contact-container .textarea::-moz-placeholder {
@@ -996,8 +1003,8 @@ a:hover {
 
 @media (min-width: 768px) {
   .contact-container h2 {
-    font-size: 72px;
-    margin: 0 0 35px;
+    font-size: 60px;
+    margin: 0 0 20px;
   }
   .contact-container h3 {
     font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
@@ -1006,28 +1013,41 @@ a:hover {
   }
   .contact-container p {
     font-family: "Franklin Gothic", Arial, Helvetica, sans-serif;
+    margin: 0 0 20px;
+  }
+  .contact-container .button-holder {
+    max-width: 630px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: right;
   }
   .contact-container .row.two-cols {
     max-width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     display: flex;
     justify-content: space-between;
   }
   .contact-container .row.two-cols .col {
     position: relative;
     width: 50%;
-    padding: 0 10px;
+    padding: 0 15px;
   }
   .contact-container .row.two-cols .col label {
+    transition: all 0.3s ease-in-out;
     position: absolute;
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 32px;
   }
   .contact-container .row.two-cols .col .input {
-    background: lightblue;
     width: 100%;
     padding: 15px 0;
+  }
+  .contact-container .row.two-cols .col.input-focused label {
+    top: 10px;
+    transform: translateY(-100%);
+    font-size: 20px;
   }
 }
 /* feedback */

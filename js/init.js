@@ -56,3 +56,16 @@ window.onclick = function (event) {
     document.body.parentNode.classList.remove("opened-popup");
   }
 };
+
+let input = document.querySelectorAll('.input');
+input.forEach(function(e) {
+  e.addEventListener('focus', () => {
+    e.parentNode.classList.add("input-focused");
+  });
+
+  e.addEventListener('blur', () => {
+    if ((e.value.length == null || e.value.length == "")) {
+      e.parentNode.classList.remove("input-focused");
+    }
+  })
+})

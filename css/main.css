@@ -930,6 +930,7 @@ a:hover {
 }
 
 .contact-form {
+  transition: all 0.3s ease-in-out;
   display: none;
   position: fixed;
   z-index: 8;

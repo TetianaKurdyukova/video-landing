@@ -110,7 +110,7 @@ body {
 .general-swiper__container .swiper-button-next-uniq,
 .general-swiper__container .swiper-button-prev-uniq {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-40%);
   width: 50px;
   height: 50px;

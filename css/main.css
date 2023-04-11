@@ -953,7 +953,7 @@ a:hover {
   width: 100%;
   max-width: 900px;
   position: relative;
-  padding: 50px 20px;
+  padding: 50px 20px 10px;
   text-align: left;
   top: 0;
   transform: none;

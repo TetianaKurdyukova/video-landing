@@ -524,6 +524,12 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .intro--section {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .intro-content {
     display: initial;
@@ -564,6 +570,12 @@ a {
 
   p {
     margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about--section {
+    margin-top: 80px;
   }
 }
 

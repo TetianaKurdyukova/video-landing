@@ -364,8 +364,11 @@
       <div class="contact-form" id="contact-form">
         <div class="contact-form__holder">
           <span class="close">&times;</span>
-          <form id="contactForm" target="_self" enctype="multipart/form-data" action="https://formkeep.com/f/ffdcb4368bbf" accept-charset="UTF-8" method="post">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
             <fieldset>
+              <input type="hidden" name="access_key" value="1102185d-2804-4503-88cf-f65ba681b5e6" />
+              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+              <input type="checkbox" name="botcheck" id="" style="display: none;" />
               <div class="contact-container">
                 <div class="contact-text">
                   <h2>LET'S TALK ABOUT YOUR PROJECT...</h2>
@@ -376,42 +379,40 @@
                       <h3>YOUR DETAILS</h3>
                       <p>I will only use these details to get in touch with you regarding this message.</p>
                       <div class="row two-cols">
-                        <div class="col" id="name__div">
-                          <label title="required" for="name">name *</label>
-                          <input type="text" name="name" id="name" required="required" autofocus="autofocus" class="input" />
+                        <div class="col">
+                          <label for="name">name</label>
+                          <input type="text" name="name" id="name" required class="input" />
                         </div>
-                        <div class="col" id="company__div">
-                          <label title="required" for="company">company *</label>
-                          <input type="text" name="company" id="company" required="required" class="input" />
+                        <div class="col">
+                          <label for="company">Company</label>
+                          <input type="text" id="company" class="input">
                         </div>
                       </div>
                       <div class="row two-cols">
-                        <div class="col" id="email__div">
-                          <label title="required" for="email">email *</label>
-                          <input type="email" name="email" id="email" required="required" class="input" />
+                        <div class="col">
+                          <label for="email">email</label>
+                          <input type="email" name="email" id="email" required class="input" />
                         </div>
-                        <div class="col" id="phone__div">
-                          <label title="required" for="phone">phone *</label>
-                          <input type="tel" name="phone" id="phone" required="required" class="input" />
+                        <div class="col">
+                          <label for="phone">Phone</label>
+                          <input type="tel" id="phone" required class="input">
                         </div>
                       </div>
                       <h3>ABOUT YOUR PROJECT</h3>
                       <p>Give me a short summary of your project and what you're looking to achieve.</p>
                       <div class="textarea-holder">
-                        <label title="required" for="Message">Message *</label>
-                        <textarea name="Message" id="Message" required="required" class="textarea" placeholder="Message *"></textarea>
+                        <textarea rows="5" name="message" id="message" placeholder="Your Message" class="textarea" required></textarea>
                       </div>
                       <div class="button-holder">
-                        <!-- <button class="contact-button">Submit <em>+</em></button> -->
-                        <input type="submit" value="Submit" class="contact-button" data-disable-with="Submit" />
+                        <button type="submit" class="contact-button">Submit <em>+</em></button>
                       </div>
+                      <p id="result" class="success-message"></p>
                     </div>
                   </div>
                 </div>
-
               </div>
-          </fieldset>
-        </form>        
+            </fieldset>
+          </form>
         </div>
       </div>
       <ul class="socials mobile-hidden">
@@ -466,24 +467,24 @@
           </div>
           <div class="swiper-slide">
             <div class="feedback-swiper__holder">
-              <img src="images/logo-01.jpg" alt="ATLANTIC BALLET ATLANTIQUE CANADA">
+              <img src="images/logo-dodo.png" alt="DodoLeather">
               <div class="feedback-content">
-                <h4>ATLANTIC BALLET ATLANTIQUE CANADA</h4>
+                <h4>DodoLeather</h4>
                 <blockquote>
-                  <p>test review</p>
-                  <figcaption>Name</figcaption>
+                  <p>Sergii made 2 promotional videos for our leather craft business and we could not be happier with them. He is always professional, well organized and full of creative ideas! Highly recommended.</p>
+                  <figcaption>Andrii and Natalia <cite>DodoLeather</cite></figcaption>
                 </blockquote>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="feedback-swiper__holder">
-              <img src="images/logo-02.png" alt="BOYS AND GIRLS CLUB">
+              <img src="images/logo-moca.jpg" alt="Moka Spa Salon">
               <div class="feedback-content">
-                <h4>BOYS AND GIRLS CLUB</h4>
+                <h4>Moka Spa Salon</h4>
                 <blockquote>
-                  <p>lorem ipsum</p>
-                  <figcaption>test name</figcaption>
+                  <p>Seniv video production is very good at making small business videos. If you are a small business owner and looking for a promo video I would recommend best made videos.  He was efficient and gave me a fair price for the video he did and did a good job. The video was part of commercial project and worked out great.</p>
+                  <figcaption>Moka Spa Salon</figcaption>
                 </blockquote>
               </div>
             </div>
@@ -562,9 +563,5 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/jquery-3.6.4.min.js"></script>
-  <script>
-    $("#contactForm").ajaxForm({url: 'https://formkeep.com/f/ffdcb4368bbf', type: 'post'})
-  </script>
 </body>
 </html>

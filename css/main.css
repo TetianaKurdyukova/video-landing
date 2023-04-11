@@ -114,11 +114,11 @@ body {
   transform: translateY(-40%);
   width: 50px;
   height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
   cursor: pointer;
-  display: none;
 }
 .general-swiper__container .swiper-button-next-uniq svg,
 .general-swiper__container .swiper-button-prev-uniq svg {
@@ -132,12 +132,6 @@ body {
   left: 0;
 }
 
-@media (min-width: 768px) {
-  .general-swiper__container .swiper-button-next-uniq,
-  .general-swiper__container .swiper-button-prev-uniq {
-    display: flex;
-  }
-}
 a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -972,6 +966,18 @@ a:hover {
   border: 0;
 }
 
+.success-message {
+  padding: 30px 0;
+  font-size: 20px;
+  text-align: center;
+}
+.success-message.text-green {
+  color: #3a731d;
+}
+.success-message.text-red {
+  color: #930a0a;
+}
+
 .contact-container {
   max-width: 640px;
   margin: 0 auto;
@@ -980,6 +986,7 @@ a:hover {
 }
 .contact-container h2 {
   font-size: 36px;
+  line-height: 0.9;
   font-weight: 900;
   margin: 0 0 15px;
 }
@@ -1143,7 +1150,7 @@ a:hover {
 @media (min-width: 640px) {
   .feedback-swiper {
     height: 100%;
-    max-height: 600px;
+    max-height: 800px;
   }
   .feedback-swiper img {
     margin: 0 45px 0 0;
@@ -1183,6 +1190,9 @@ a:hover {
   }
 }
 @media (min-width: 1024px) {
+  .feedback-swiper {
+    max-height: 700px;
+  }
   .feedback-swiper h4 {
     font-size: 34px;
   }
@@ -1208,6 +1218,7 @@ a:hover {
 }
 .footer .contact-button {
   margin: 15px 0 0;
+  font-size: 16px;
 }
 .footer .copyright {
   font-size: 12px;

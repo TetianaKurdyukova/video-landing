@@ -364,7 +364,7 @@
       <div class="contact-form" id="contact-form">
         <div class="contact-form__holder">
           <span class="close">&times;</span>
-          <form action="#">
+          <form id="contactForm" target="_self" enctype="multipart/form-data" action="https://formkeep.com/f/ffdcb4368bbf" accept-charset="UTF-8" method="post">
             <fieldset>
               <div class="contact-container">
                 <div class="contact-text">
@@ -376,39 +376,42 @@
                       <h3>YOUR DETAILS</h3>
                       <p>I will only use these details to get in touch with you regarding this message.</p>
                       <div class="row two-cols">
-                        <div class="col">
-                          <label for="name">Name</label>
-                          <input type="text" id="name" class="input">
+                        <div class="col" id="name__div">
+                          <label title="required" for="name">name *</label>
+                          <input type="text" name="name" id="name" required="required" autofocus="autofocus" class="input" />
                         </div>
-                        <div class="col">
-                          <label for="company">Company</label>
-                          <input type="text" id="company" class="input">
+                        <div class="col" id="company__div">
+                          <label title="required" for="company">company *</label>
+                          <input type="text" name="company" id="company" required="required" class="input" />
                         </div>
                       </div>
                       <div class="row two-cols">
-                        <div class="col">
-                          <label for="email">Email</label>
-                          <input type="text" id="email" class="input">
+                        <div class="col" id="email__div">
+                          <label title="required" for="email">email *</label>
+                          <input type="email" name="email" id="email" required="required" class="input" />
                         </div>
-                        <div class="col">
-                          <label for="phone">Phone</label>
-                          <input type="tel" id="phone" class="input">
+                        <div class="col" id="phone__div">
+                          <label title="required" for="phone">phone *</label>
+                          <input type="tel" name="phone" id="phone" required="required" class="input" />
                         </div>
                       </div>
                       <h3>ABOUT YOUR PROJECT</h3>
                       <p>Give me a short summary of your project and what you're looking to achieve.</p>
                       <div class="textarea-holder">
-                        <textarea class="textarea" cols="30" rows="10" placeholder="Message (optional)"></textarea>
+                        <label title="required" for="Message">Message *</label>
+                        <textarea name="Message" id="Message" required="required" class="textarea" placeholder="Message *"></textarea>
                       </div>
                       <div class="button-holder">
-                        <button class="contact-button">Submit <em>+</em></button>
+                        <!-- <button class="contact-button">Submit <em>+</em></button> -->
+                        <input type="submit" value="Submit" class="contact-button" data-disable-with="Submit" />
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
-            </fieldset>
-          </form>
+          </fieldset>
+        </form>        
         </div>
       </div>
       <ul class="socials mobile-hidden">
@@ -559,5 +562,9 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/jquery-3.6.4.min.js"></script>
+  <script>
+    $("#contactForm").ajaxForm({url: 'https://formkeep.com/f/ffdcb4368bbf', type: 'post'})
+  </script>
 </body>
 </html>

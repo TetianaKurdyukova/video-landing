@@ -24,7 +24,11 @@ const swiper2 = new Swiper('.general-swiper', {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next-uniq",
+        prevEl: ".swiper-button-prev-uniq",
+      }
     },
     1024: {
       slidesPerView: 3,

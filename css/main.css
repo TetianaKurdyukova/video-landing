@@ -94,6 +94,50 @@ body {
     display: none !important;
   }
 }
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+.swiper-button-prev svg path,
+.swiper-button-next svg path {
+  transition: all 0.3s ease-in-out;
+}
+.swiper-button-prev:hover svg path,
+.swiper-button-next:hover svg path {
+  opacity: 1;
+}
+
+.general-swiper__container .swiper-button-next-uniq,
+.general-swiper__container .swiper-button-prev-uniq {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  display: none;
+}
+.general-swiper__container .swiper-button-next-uniq svg,
+.general-swiper__container .swiper-button-prev-uniq svg {
+  width: 36px;
+  height: 46px;
+}
+.general-swiper__container .swiper-button-next-uniq {
+  right: 0;
+}
+.general-swiper__container .swiper-button-prev-uniq {
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .general-swiper__container .swiper-button-next-uniq,
+  .general-swiper__container .swiper-button-prev-uniq {
+    display: flex;
+  }
+}
 a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -744,8 +788,8 @@ a:hover {
 }
 
 .general-swiper__container {
-  margin: 0 -20px;
-  overflow: hidden;
+  padding: 0 50px;
+  position: relative;
 }
 .general-swiper__container .swiper-wrapper {
   padding: 0 0 50px;
@@ -895,7 +939,7 @@ a:hover {
   height: 100%;
   overflow: auto;
   z-index: 9999;
-  background: #090909;
+  background: rgba(86, 81, 81, 0.5);
 }
 .contact-form .contact-form__holder {
   margin: 0 auto;
@@ -906,6 +950,7 @@ a:hover {
   text-align: left;
   top: 50%;
   transform: translateY(-50%);
+  background: #090909;
 }
 .contact-form .close {
   position: absolute;
@@ -1080,18 +1125,6 @@ a:hover {
 }
 .feedback-swiper blockquote cite {
   font-style: normal;
-}
-.feedback-swiper .swiper-button-prev:after,
-.feedback-swiper .swiper-button-next:after {
-  display: none;
-}
-.feedback-swiper .swiper-button-prev svg path,
-.feedback-swiper .swiper-button-next svg path {
-  transition: all 0.3s ease-in-out;
-}
-.feedback-swiper .swiper-button-prev:hover svg path,
-.feedback-swiper .swiper-button-next:hover svg path {
-  opacity: 1;
 }
 
 .feedback-content {

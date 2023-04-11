@@ -109,6 +109,64 @@ body {
   }
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  &:after {
+    display: none;
+  }
+
+  svg {
+    path {
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.general-swiper__container {
+  .swiper-button-next-uniq,
+  .swiper-button-prev-uniq {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+
+    svg {
+      width: 36px;
+      height: 46px;
+    }
+  }
+
+  .swiper-button-next-uniq {
+    right: 0;
+  }
+  .swiper-button-prev-uniq {
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .general-swiper__container {
+    .swiper-button-next-uniq,
+    .swiper-button-prev-uniq {
+      display: flex;
+    }
+  }
+}
+
 a {
   transition: all .3s ease-in-out;
   text-decoration: none;
@@ -858,8 +916,8 @@ a {
 }
 
 .general-swiper__container {
-  margin: 0 -20px;
-  overflow: hidden;
+  padding: 0 50px;
+  position: relative;
 
   .swiper-wrapper {
     padding: 0 0 50px;
@@ -1040,7 +1098,7 @@ a {
   height: 100%;
   overflow: auto;
   z-index: 9999;
-  background: #090909;
+  background: rgba(86, 81, 81, .5);
   
   .contact-form__holder {
     margin: 0 auto;
@@ -1051,6 +1109,7 @@ a {
     text-align: left;
     top: 50%;
     transform: translateY(-50%);
+    background: #090909;
   }
 
   .close {
@@ -1262,27 +1321,6 @@ a {
 
     cite {
       font-style: normal;
-    }
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    &:after {
-      display: none;
-    }
-
-    svg {
-      path {
-        transition: all .3s ease-in-out;
-      }
-    }
-
-    &:hover {
-      svg {
-        path {
-          opacity: 1;
-        }
-      }
     }
   }
 }

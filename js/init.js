@@ -16,26 +16,37 @@ const swiper = new Swiper('.feedback-swiper', {
   }
 });
 
-const swiper2 = new Swiper('.general-swiper', {
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20      
+/* swiper general */
+const myCustomSlider = document.querySelectorAll('.general-swiper');
+const mySliderPrev = document.querySelectorAll('.swiper-button-prev');
+const mySliderNext = document.querySelectorAll('.swiper-button-next');
+
+for( i=0; i< myCustomSlider.length; i++ ) {
+  myCustomSlider[i].classList.add('general-swiper-' + i);
+  mySliderPrev[i].classList.add('swiper-button-prev-' + i);
+  mySliderNext[i].classList.add('swiper-button-next-' + i);
+
+  var vidswiper = new Swiper('.general-swiper-' + i, {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 20
+    navigation: {
+      nextEl: '.swiper-button-next-' +i,
+      prevEl: '.swiper-button-prev-' +i,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20      
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
-  }
-});
+  });
+}
 
 /* contact form */
 let modalBtns = [...document.querySelectorAll(".contact-modal-button")];

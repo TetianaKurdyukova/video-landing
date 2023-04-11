@@ -94,6 +94,10 @@ body {
     display: none !important;
   }
 }
+.swiper-container {
+  padding: 0;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   display: none;
@@ -322,6 +326,7 @@ a:hover {
   font-weight: 500;
   text-transform: uppercase;
   padding: 20px;
+  overflow-y: auto;
 }
 .mobile-menu__holder li {
   margin: 0 0 10px;
@@ -801,9 +806,9 @@ a:hover {
 .general-swiper__container .video {
   position: absolute;
   top: 0;
-  left: 18px;
-  width: 97%;
-  height: 97%;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1127,6 +1132,7 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto 25px;
+  width: 100%;
 }
 .feedback-swiper blockquote {
   margin: 0;
@@ -1145,6 +1151,10 @@ a:hover {
 }
 .feedback-content figcaption {
   font-size: 14px;
+}
+
+.feedback-swiper__holder {
+  padding: 0 50px;
 }
 
 @media (min-width: 640px) {
@@ -1171,7 +1181,6 @@ a:hover {
     justify-content: center;
   }
   .feedback-swiper__holder {
-    padding: 0 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -1319,7 +1328,7 @@ a:hover {
 .footer-logo {
   display: block;
   margin: 0 auto;
-  width: 210px;
+  width: 160px;
   height: 100%;
 }
 .footer-logo img {

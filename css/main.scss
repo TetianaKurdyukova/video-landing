@@ -109,6 +109,10 @@ body {
   }
 }
 
+.swiper-container {
+  padding: 0;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   &:after {
@@ -369,6 +373,7 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   padding: 20px;
+  overflow-y: auto;
 
   li {
     margin: 0 0 10px;
@@ -929,9 +934,12 @@ a {
   .video {
     position: absolute;
     top: 0;
-    left: 18px;
-    width: 97%;
-    height: 97%;
+    // left: 18px;
+    // width: 97%;
+    // height: 97%;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1321,6 +1329,7 @@ a {
     height: 100%;
     object-fit: cover;
     margin: 0 auto 25px;
+    width: 100%;
   }
 
   blockquote {
@@ -1344,6 +1353,10 @@ a {
   figcaption {
     font-size: 14px;
   }
+}
+
+.feedback-swiper__holder {
+  padding: 0 50px;
 }
 
 @media (min-width: 640px) {
@@ -1374,7 +1387,6 @@ a {
   }
 
   .feedback-swiper__holder {
-    padding: 0 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -1556,7 +1568,7 @@ a {
 .footer-logo {
   display: block;
   margin: 0 auto;
-  width: 210px;
+  width: 160px;
   height: 100%;
 
   img {

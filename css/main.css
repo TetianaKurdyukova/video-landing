@@ -385,6 +385,7 @@ a:hover {
   max-height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
+  min-height: 300px;
 }
 
 .intro-content {
@@ -535,6 +536,12 @@ a:hover {
 .wedding--section p {
   margin: 0 0 20px;
 }
+@keyframes pulsate {
+  50% {
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.3), 0 0 5px #fff, 0 0 8px #fff;
+  }
+}
 .love-story--section h2,
 .real-estate--section h2,
 .commercial--section h2,
@@ -549,6 +556,7 @@ a:hover {
   letter-spacing: 1.4px;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a68383, 0 0 20px #a68383, 0 0 25px #a68383, 0 0 30px #a68383, 0 0 35px #a68383;
   margin: 0 0 50px;
+  animation: pulsate 3.5s linear infinite;
 }
 .love-story--section h2:before,
 .real-estate--section h2:before,
@@ -936,8 +944,7 @@ a:hover {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  height: 100vh;
   z-index: 9999;
   background: rgba(86, 81, 81, 0.5);
 }
@@ -948,9 +955,11 @@ a:hover {
   position: relative;
   padding: 50px 20px;
   text-align: left;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  transform: none;
+  height: 100%;
   background: #090909;
+  overflow-y: auto;
 }
 .contact-form .close {
   position: absolute;
@@ -1060,6 +1069,11 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .contact-form .contact-form__holder {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 95%;
+  }
   .contact-container h2 {
     font-size: 60px;
     margin: 0 0 20px;
@@ -1248,18 +1262,7 @@ a:hover {
 .footer-column li {
   margin: 0 0 8px;
 }
-@media (max-width: 767px) {
-  .footer-column:first-child {
-    margin-left: 48px;
-  }
-  .footer-column:last-child {
-    margin: 0 15px;
-  }
-}
 
-.footer-contact {
-  margin: 0 48px;
-}
 .footer-contact h4 {
   margin: 0 0 9px;
 }

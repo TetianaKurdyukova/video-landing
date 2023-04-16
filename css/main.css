@@ -1137,6 +1137,9 @@ a:hover {
   background: #171717;
   padding: 50px 0;
 }
+.feedback--section .container {
+  max-width: 1100px;
+}
 .feedback--section h3 {
   text-transform: uppercase;
   text-align: center;
@@ -1184,7 +1187,7 @@ a:hover {
 @media (min-width: 640px) {
   .feedback-swiper {
     height: 100%;
-    max-height: 800px;
+    max-height: 600px;
   }
   .feedback-swiper img {
     margin: 0 45px 0 0;
@@ -1224,21 +1227,21 @@ a:hover {
 }
 @media (min-width: 1024px) {
   .feedback-swiper {
-    max-height: 700px;
+    max-height: 600px;
   }
   .feedback-swiper h4 {
     font-size: 34px;
   }
   .feedback-content {
-    font-size: 28px;
+    font-size: 24px;
   }
   .feedback-content figcaption {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 /* footer */
 .footer {
-  padding: 50px 0 20px;
+  padding: 50px 0;
 }
 .footer .container {
   max-width: 900px;
@@ -1246,39 +1249,16 @@ a:hover {
 .footer h4 {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0 0 15px;
 }
 .footer .contact-button {
-  margin: 15px 0 0;
+  margin: 25px 0 0;
   font-size: 16px;
-}
-.footer .copyright {
-  font-size: 12px;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.footer-column--holder {
-  display: flex;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin: 0 0 27px;
-}
-
-.footer-column {
-  width: 50%;
-}
-.footer-column li {
-  margin: 0 0 8px;
-}
-
-.footer-contact h4 {
-  margin: 0 0 9px;
 }
 
 .footer-phone {
-  font-size: 15px;
+  font-size: 16px;
   margin: 0 0 7px;
 }
 
@@ -1319,63 +1299,62 @@ a:hover {
 
 .socials {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 20px 0;
+  margin: 0 -10px;
+  overflow: hidden;
 }
 .socials li {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .socials li img {
   display: block;
 }
+.socials a svg {
+  width: 36px;
+}
 .socials a svg g,
 .socials a svg path {
   transition: all 0.3s ease-in-out;
+}
+.socials a .youtube-icon {
+  width: 44px;
 }
 .socials a:hover svg g,
 .socials a:hover svg path {
   opacity: 1;
 }
 
-.footer-logo {
-  display: block;
-  margin: 0 auto;
-  width: 160px;
-  height: 100%;
-}
-.footer-logo img {
-  display: block;
-}
-
 @media (min-width: 768px) {
+  .three-columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    overflow: hidden;
+  }
+  .three-columns .footer-column {
+    width: 55%;
+    padding: 0 10px;
+  }
+  .three-columns .footer-column:first-child {
+    width: 25%;
+  }
+  .three-columns .footer-column:last-child {
+    width: 20%;
+  }
+  .three-columns .socials {
+    padding: 0;
+  }
   .contact-button {
     font-size: 24px;
     padding: 10px 61px 10px 15px;
   }
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 50px;
-  }
-  .footer-column--holder {
-    width: 60%;
-    margin: 0;
-  }
-  .socials {
-    display: none;
-  }
-  .footer-contact {
-    width: 40%;
-    margin: 0;
-    font-size: 16px;
-  }
-  .footer-logo {
-    margin: 0;
-  }
 }
 @media (min-width: 1024px) {
-  .footer-contact {
-    font-size: 24px;
+  .footer h4 {
+    font-size: 26px;
+  }
+  .three-columns .footer-column {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

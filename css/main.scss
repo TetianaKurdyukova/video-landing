@@ -1544,6 +1544,10 @@ a {
 }
 
 @media (min-width: 768px) {
+  .footer {
+    padding: 90px 0;
+  }
+
   .three-columns {
     display: flex;
     justify-content: space-between;

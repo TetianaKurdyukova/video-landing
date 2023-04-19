@@ -36,6 +36,8 @@ jobs:
         run: npm ci
       - name: Build CSS
         run: npm run scss
+      - name: Cleanup
+        run: rm -rf css/main.scss node_modules .gitattributes .gitignore package.json package-lock.jsonssss
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

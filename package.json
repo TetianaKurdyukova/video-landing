@@ -1,0 +1,10 @@
+{
+  "name": "seniv_video",
+  "version": "0.1.0",
+  "scripts": {
+    "scss": "node-sass --output-style compressed css/main.scss css/main.css"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
